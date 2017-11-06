@@ -1,0 +1,6 @@
+import * as fs from 'fs';
+const path = require('path');
+
+export const atoms = fs.readdirSync(path.resolve('./'));
+
+export default atoms;
