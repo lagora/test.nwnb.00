@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Light = props => (
+export const Light = () => (
   <a-entity>
     <a-entity light="type: ambient; intensity: 0.75;" />
     <a-entity

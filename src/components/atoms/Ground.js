@@ -6,7 +6,6 @@ import { xyzToString } from '../../utils';
 export const Ground =
 ({ position, size }) => (
   <a-entity>
-    <Axes position={{ x: 0, y: 0.1, z: 0 }} />
     <a-plane
       position={xyzToString(position)}
       rotation="-90 0 0"
@@ -22,7 +21,7 @@ export const Ground =
 
 Ground.defaultProps = {
   position: { x: 0, y: 0, z: 0 },
-  size: { width: 1000, height: 1000 },
+  size: { width: 10000, height: 10000 },
 };
 
 Ground.propTypes = {

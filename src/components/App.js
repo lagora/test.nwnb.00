@@ -17,9 +17,7 @@ export const App = (props) => {
     return false;
   }
   return (
-    <Axes>
-      <Level {...props} />
-    </Axes>
+    <Level {...props} />
   );
 };
 
