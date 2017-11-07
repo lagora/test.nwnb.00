@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/modules/level.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\index.html">All files</a> / <a href="index.html">src/modules</a> level.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/80</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/42</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114</td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { v4 }<span class="cstat-no" title="statement not covered" > from 'uuid';<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span></span></span></span></span></span></span>
+import { hash a<span class="cstat-no" title="statement not covered" >s h } from 'spark-md5</span>';
+import { rang<span class="cstat-no" title="statement not covered" >e, reducerMaker, xyz</span>ToString <span class="fstat-no" title="function not covered" >} from '../utils</span>';<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span>
+&nbsp;
+const areaSize <span class="cstat-no" title="statement not covered" >= 5</span>0;
+const storyHeight <span class="cstat-no" title="statement not covered" >= </span>4;
+const colorMapping <span class="cstat-no" title="statement not covered" >= ['red', 'orange', 'yellow', 'green'</span>];
+&nbsp;
+export const initia<span class="cstat-no" title="statement not covered" >lState = {</span>
+  areas: [],
+  hash: undefined,
+  size: -1,
+};
+&nbsp;
+const RESET_LEVEL <span class="cstat-no" title="statement not covered" >= 'reset the level</span>';
+&nbsp;
+export const<span class="cstat-no" title="statement not covered" > types = {</span>
+  RESET_LEVEL,
+};
+&nbsp;
+export const getLev<span class="cstat-no" title="statement not covered" >elArea = index =&gt; ({<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span>
+  position: {
+    x: ((index * 10) + 1) / 8,
+    y: 5,
+    z: ((index) % 8) * 10,
+  },
+  width: 10,
+  height: 10,
+  depth: 10,
+});
+&nbsp;
+export const g<span class="cstat-no" title="statement not covered" >etSize = size =&gt; ({ width: <span class="fstat-no" title="function not covered" >size * 0</span>.5, hei<span class="cstat-no" title="statement not covered" >ght: size * 1.5, depth: size * 0.5 });</span></span>
+&nbsp;
+export const<span class="cstat-no" title="statement not covered" > cross = a =&gt; b =&gt; a.map(<span class="fstat-no" title="function not covered" >(x, i)</span> =&gt; <span class="cstat-no" title="statement not covered" >({ ...a<span class="fstat-no" title="function not covered" >[i</span>], ...b[i] }<span class="cstat-no" title="statement not covered" >));<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span>
+&nbsp;
+export const <span class="cstat-no" title="statement not covered" >expand = size =&gt; i =&gt; i * <span class="fstat-no" title="function not covered" >size;<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span>
+&nbsp;
+export const getStorie<span class="cstat-no" title="statement not covered" >sCount = ({ height }) =&gt; heightOfAf<span class="fstat-no" title="function not covered" >loor =&gt; parseInt</span>(height / heightOfAf<span class="cstat-no" title="statement not covered" >loor, 10);<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span>
+&nbsp;
+// export const makeStoryCorner = ({ id, position, size }) =&gt; {
+// };
+&nbsp;
+export const makeBuildin<span class="cstat-no" title="statement not covered" >gFloor = ({ id, position, size }) =&gt; <span class="fstat-no" title="function not covered" >{<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ></span></span></span></span></span>
+  const s <span class="cstat-no" title="statement not covered" >= { width: size.width - 0.1, height: 0.1, depth: size.depth - 0.1 </span>};
+  const floorPosition <span class="cstat-no" title="statement not covered" >= {</span>
+    ...position,
+    y: (position.y - (size.height / 2)),
+  };
+  const key <span class="cstat-no" title="statement not covered" >= `${id}-floor-${h(v4())}`;</span>
+  const material <span class="cstat-no" title="statement not covered" >= 'color: red</span>';
+<span class="cstat-no" title="statement not covered" >  return ({</span>
+    id: key, key, position: xyzToString(floorPosition), ...s, material,
+  });
+};
+&nbsp;
+export const makeBuildingS<span class="cstat-no" title="statement not covered" >tories = ({ id, position, size }) =&gt;<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span></span>
+  range(getStoriesCount(size)(storyHeight))(0)().map((story, i) =&gt; <span class="fstat-no" title="function not covered" >{</span>
+    const s = <span class="cstat-no" title="statement not covered" >{ ...size, height: storyHeight };</span>
+    const storyPosition = <span class="cstat-no" title="statement not covered" >{</span>
+      ...position,
+      y: (position.y - (size.height / 2)) + (s.height * i) + (s.height / 2),
+    };
+    const key = <span class="cstat-no" title="statement not covered" >`${id}-story-${i}`;</span>
+    // const material = `color: ${colorMapping[parseInt(i % colorMapping.length, 10)]}`;
+    const floor = <span class="cstat-no" title="statement not covered" >makeBuildingFloor({ id: key, position: storyPosition, size: s });</span>
+    re<span class="cstat-no" title="statement not covered" >turn ({</span>
+      id: key, key, position: xyzToString(storyPosition), ...s, floor,
+    });
+  });
+&nbsp;
+export const makeBu<span class="cstat-no" title="statement not covered" >ilding = () =&gt; expandFunction =&gt;<span class="fstat-no" title="function not covered" > (i, x, z) =&gt;</span> (s<span class="cstat-no" title="statement not covered" >ize, le<span class="fstat-no" title="function not covered" >ve</span>lAreaSize) =&gt; {<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span></span>
+  const position = {<span class="cstat-no" title="statement not covered" ></span>
+    x: expandFunction(levelAreaSize)(x),
+    y: (size.height / 2),
+    z: expandFunction(levelAreaSize)(z),
+  };
+  const id = `bui<span class="cstat-no" title="statement not covered" >lding-${i}`;</span>
+  const stories = make<span class="cstat-no" title="statement not covered" >BuildingStories({ id, position, size });</span>
+  return<span class="cstat-no" title="statement not covered" > {</span>
+    i, id, key: id, position, stories, ...size,
+  };
+};
+&nbsp;
+export const rese<span class="cstat-no" title="statement not covered" >tLevel = ({ hash, size } = { s<span class="fstat-no" title="function not covered" >ize: 8 }) =</span>&gt; (dispatch) =&gt;<span class="cstat-no" title="statement not covered" > {<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ></span></span></span></span></span></span>
+  const areas = <span class="cstat-no" title="statement not covered" >[];</span>
+  fo<span class="cstat-no" title="statement not covered" >r (let z = 0, i = 0; z &lt; size; z += 1) {</span>
+    fo<span class="cstat-no" title="statement not covered" >r (let x = 0; x &lt; size; x += 1, i += 1) {</span>
+      const s = <span class="cstat-no" title="statement not covered" >getSize(areaSize);</span>
+      ar<span class="cstat-no" title="statement not covered" >eas.push(makeBuilding(hash)(expand)(i, x, z)(s, areaSize * 1.1));</span>
+    }
+  }
+  re<span class="cstat-no" title="statement not covered" >turn dispatch({</span>
+    type: RESET_LEVEL,
+    payload: { areas, hash, size },
+  });
+};
+&nbsp;
+export const a<span class="cstat-no" title="statement not covered" >ctions = {</span>
+  resetLevel,
+};
+&nbsp;
+export const m<span class="cstat-no" title="statement not covered" >apping = {</span>
+  [RESET_LEVE<span class="fstat-no" title="function not covered" >L]</span>: (state, action) =&gt; ({<span class="cstat-no" title="statement not covered" ></span>
+    ...state,
+    areas: action.payload.areas,
+    hash: action.payload.hash,
+    size: action.payload.size,
+  }),
+};
+&nbsp;
+export const r<span class="cstat-no" title="statement not covered" >educer = reducerMaker(initialState, mapping);<span class="cstat-no" title="statement not covered" ></span></span>
+&nbsp;
+export default reducer;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Nov 07 2017 21:37:09 GMT+0100 (Paris, Madrid)
+</div>
+</div>
+<script src="..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\sorter.js"></script>
+</body>
+</html>
