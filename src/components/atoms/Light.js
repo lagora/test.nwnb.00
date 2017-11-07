@@ -6,13 +6,10 @@ export const Light = () => (
     <a-entity
       light={
         [
-          'type: point',
-          'castShadow: true',
-          'decay: 0.1',
-          'intensity: 1',
+          'type: point', 'castShadow: true',
+          'decay: 0.1', 'intensity: 1',
           'shadowCameraVisible: false',
-          'shadowMapHeight: 4096',
-          'shadowMapWidth: 4096',
+          'shadowMapHeight: 4096', 'shadowMapWidth: 4096',
         ].join(';')
       }
       position="-5 30 15"

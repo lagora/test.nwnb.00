@@ -6,39 +6,22 @@ export const Axes = (props) => {
   const {
     children, width, height, depth,
   } = props;
+  const lineProps = [
+    [`${position.x + (width / 2) + 1}, ${position.y}, ${position.z};`, 'red'],
+    [`${position.x}, ${position.y + (height / 2) + 1}, ${position.z};`, 'green'],
+    [`${position.x}, ${position.y}, ${position.z + (depth / 2) + 1};`, 'blue'],
+    [`${position.x - (width / 2) - 1}, ${position.y}, ${position.z};`, 'pink'],
+    [`${position.x}, ${position.y - (height / 2) - 1}, ${position.z};`, 'yellow'],
+    [`${position.x}, ${position.y}, ${position.z - (depth / 2) - 1};`, 'violet'],
+  ].map(p => ({
+    line: {
+      start: `${position.x}, ${position.y}, ${position.z};`,
+      end: p[0],
+      color: p[1],
+    },
+  }));
   return (
-    <a-entity
-      line={`
-        start: ${position.x}, ${position.y}, ${position.z};
-        end: ${position.x + (width / 2) + 1}, ${position.y}, ${position.z};
-        color: red;
-      `}
-      line__2={`
-        start: ${position.x}, ${position.y}, ${position.z};
-        end: ${position.x}, ${position.y + (height / 2) + 1}, ${position.z};
-        color: green;
-      `}
-      line__3={`
-        start: ${position.x}, ${position.y}, ${position.z};
-        end: ${position.x}, ${position.y}, ${position.z + (depth / 2) + 1};
-        color: blue;
-      `}
-      line__4={`
-        start: ${position.x}, ${position.y}, ${position.z};
-        end: ${position.x - (width / 2) - 1}, ${position.y}, ${position.z};
-        color: pink;
-      `}
-      line__5={`
-        start: ${position.x}, ${position.y}, ${position.z};
-        end: ${position.x}, ${position.y - (height / 2) - 1}, ${position.z};
-        color: yellow;
-      `}
-      line__6={`
-        start: ${position.x}, ${position.y}, ${position.z};
-        end: ${position.x}, ${position.y}, ${position.z - (depth / 2) - 1};
-        color: violet;
-      `}
-    >
+    <a-entity {...lineProps}>
       {typeof children !== 'undefined' && children}
     </a-entity>
   );
