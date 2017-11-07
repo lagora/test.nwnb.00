@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const actionMapper = unboundActions => binder => dispatch =>
   ({
     actions: Object.keys(unboundActions).reduce(
@@ -8,6 +10,10 @@ export const actionMapper = unboundActions => binder => dispatch =>
 
 export const domBinder = document => selector =>
   document.querySelector(selector);
+
+export const makeAreas = LevelArea => areas => areas.map(p =>
+  <LevelArea key={`level-area-${JSON.stringify(p)}`} { ...p} />
+);
 
 export const range = max => (min = 0) => (previous = []) =>
   (previous.length < (max - min) ? range(max)(min)(previous.concat('')) : previous.map((x, i) => i + min));
