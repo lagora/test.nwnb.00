@@ -19,16 +19,11 @@ export const Level = props => (
         y: props.level.size * 0,
         z: (props.level.size * 5),
       }}
-      rotation={{
-        x: 0,
-        y: 45,
-        z: 0,
-      }}
+      rotation={{ x: 0, y: 45, z: 0 }}
     />
   </a-scene>
 );
 
-Level.propTypes = {
-};
+Level.propTypes = {};
 
 export default Level;
