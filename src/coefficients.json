@@ -1,0 +1,19 @@
+{
+    "agent": {
+        "angularVelocity": {
+            "x": 2,
+            "y": 0,
+            "z": 2
+        }
+    },
+    "building": {
+        "position": {
+            "x": 16,
+            "y": 0,
+            "z": 16
+        },
+        "width": 1,
+        "height": 1,
+        "depth": 1
+    }
+}
