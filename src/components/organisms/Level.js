@@ -9,7 +9,7 @@ export const Level = ({ level }) => (
   <a-scene shadow="type: pcfsoft" physics="debug: true">
     <Light />
     <Ground />
-    {makeAreas(level.areas)}
+    {makeAreas(LevelArea)(level.areas)}
     <Player
       position={{ x: (level.size * 5), y: level.size * 0, z: (level.size * 5)}}
       rotation={{ x: 0, y: 45, z: 0 }}

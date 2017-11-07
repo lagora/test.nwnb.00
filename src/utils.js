@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const actionMapper = unboundActions => binder => dispatch =>
   ({
     actions: Object.keys(unboundActions).reduce(
@@ -9,7 +11,7 @@ export const actionMapper = unboundActions => binder => dispatch =>
 export const domBinder = document => selector =>
   document.querySelector(selector);
 
-export const makeAreas = areas => areas.map(p =>
+export const makeAreas = LevelArea => areas => areas.map(p =>
   <LevelArea key={`level-area-${JSON.stringify(p)}`} { ...p} />
 );
 
