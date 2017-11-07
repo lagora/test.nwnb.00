@@ -1,5 +1,4 @@
 import React from 'react';
-// import { PropTypes } from 'prop-types';
 import { Building } from './Building';
 
 export const LevelArea = (props) => (
