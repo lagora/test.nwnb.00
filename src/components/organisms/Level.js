@@ -1,6 +1,4 @@
 import React from 'react';
-// import { bindActionCreators as binder } from 'redux';
-// import { PropTypes } from 'prop-types';
 import { Ground } from '../atoms/Ground';
 import { Light } from '../atoms/Light';
 import { LevelArea } from './LevelArea';

@@ -3,7 +3,6 @@ import { bindActionCreators as binder } from 'redux';
 import { connect } from 'react-redux';
 import { actions as unboundActions } from '../modules/actions';
 import { actionMapper } from '../utils';
-// import { PropTypes } from 'prop-types';
 import { Level } from './organisms/Level';
 import Axes from './services/Axes'; // eslint-disable-line
 import { v4 } from 'uuid';

@@ -1,7 +1,5 @@
 import React from 'react';
-// import { PropTypes } from 'prop-types';
 import { BuildingFloor } from '../atoms/BuildingFloor';
-// import { BuildingCorner } from '../atoms/BuildingCorner';
 
 export const BuildingStory = props => (
   <a-entity>

@@ -1,5 +1,4 @@
 import React from 'react';
-// import { PropTypes } from 'prop-types';
 import { xyzToString } from '../../utils';
 import { BuildingStory } from '../molecules/BuildingStory';
 import { range } from '../../utils';
@@ -26,12 +25,6 @@ Building.propTypes = {
     width: PropTypes.number.isRequired,
     height: PropTypes.number.isRequired,
     depth: PropTypes.number.isRequired,
-    // stories: PropTypes.arrayOf(PropTypes.shape({
-    //   position: PropTypes.string.isRequired,
-    //   width: PropTypes.number.isRequired,
-    //   height: PropTypes.number.isRequired,
-    //   depth: PropTypes.number.isRequired,
-    // })).isRequired,
   })).isRequired,
 };
 
