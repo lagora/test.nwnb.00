@@ -1,7 +1,6 @@
 import { applyMiddleware, createStore } from 'redux';
 import { logger } from 'redux-logger';
 import thunk from 'redux-thunk';
-// import createSagaMiddleware from 'redux-saga';
 import { rootReducer } from './reducer';
 
 export const store = createStore(
