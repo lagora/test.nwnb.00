@@ -13,20 +13,15 @@ export const clean = config => ({
 });
 
 export default new Config().extend({
-  './conf/webpack.dev.config.js': config => clean(config),
-})
+  './conf/webpack.dev.config.js': config => clean(config) })
   .merge({
     plugins: [
       new webpack.optimize.DedupePlugin(),
       new webpack.optimize.OccurrenceOrderPlugin(true),
       new webpack.optimize.UglifyJsPlugin({
         mangle: true,
-        output: {
-          comments: false,
-        },
-        compress: {
-          warnings: false,
-        },
+        output: { comments: false },
+        compress: { warnings: false },
       }),
     ],
   });
