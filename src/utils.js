@@ -9,7 +9,7 @@ export const actionMapper = unboundActions => binder => dispatch =>
 export const domBinder = document => selector =>
   document.querySelector(selector);
 
-export const makeAreas = areas => area.map(p =>
+export const makeAreas = areas => areas.map(p =>
   <LevelArea key={`level-area-${JSON.stringify(p)}`} { ...p} />
 );
 
