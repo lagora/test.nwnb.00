@@ -20,20 +20,15 @@ export const Ground =
 );
 
 Ground.defaultProps = {
-  position: { x: 0, y: 0, z: 0 },
-  size: { width: 10000, height: 10000 },
+  position: { x: 0, y: 0, z: 0 }, size: { width: 10000, height: 10000 },
 };
 
 Ground.propTypes = {
   position: PropTypes.shape({
-    x: PropTypes.number,
-    y: PropTypes.number,
-    z: PropTypes.number,
+    x: PropTypes.number, y: PropTypes.number, z: PropTypes.number,
   }),
   size: PropTypes.shape({
-    width: PropTypes.number,
-    height: PropTypes.number,
-    depth: PropTypes.number,
+    width: PropTypes.number, height: PropTypes.number, depth: PropTypes.number,
   }),
 };
 

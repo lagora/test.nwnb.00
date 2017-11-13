@@ -7,25 +7,20 @@ import { PropTypes } from 'prop-types';
 const storyHeigh = 4;
 
 export const Building = props => (
-  <a-entity>
+  <a-entity id={props.id}>
     <a-box
       position={props.position}
       width={props.width}
       height={props.height}
       depth={props.depth}
-      shadow="receive: false;"
+      castShadow="true"
+      shadow="receive: true;"
     />
-    {props.stories.map(floor => <BuildingStory {...floor} />)}
+    {/* {props.stories.map(floor => <BuildingStory {...floor} />)} */}
   </a-entity>
 );
 
 Building.propTypes = {
-  stories: PropTypes.arrayOf(PropTypes.shape({
-    position: PropTypes.string.isRequired,
-    width: PropTypes.number.isRequired,
-    height: PropTypes.number.isRequired,
-    depth: PropTypes.number.isRequired,
-  })).isRequired,
 };
 
 export default Building;

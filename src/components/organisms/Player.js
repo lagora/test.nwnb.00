@@ -12,7 +12,7 @@ export const Player = (props) => (
   >
     <Camera
       position={{ x: 0, y: 0, z: 1.5 }}
-      rotation={{ x: -30, y: 0, z: 0 }}
+      rotation={{ x: 9, y: 0, z: 0 }}
     />
   </a-entity>
 );

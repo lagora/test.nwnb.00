@@ -12,20 +12,15 @@ export const Camera =
 );
 
 Camera.defaultProps = {
-  position: { x: 0, y: 0, z: 0 },
-  rotation: { x: 0, y: 0, z: 0 },
+  position: { x: 0, y: 0, z: 0 }, rotation: { x: 0, y: 0, z: 0 },
 };
 
 Camera.propTypes = {
   position: PropTypes.shape({
-    x: PropTypes.number,
-    y: PropTypes.number,
-    z: PropTypes.number,
+    x: PropTypes.number, y: PropTypes.number, z: PropTypes.number,
   }),
   rotation: PropTypes.shape({
-    x: PropTypes.number,
-    y: PropTypes.number,
-    z: PropTypes.number,
+    x: PropTypes.number, y: PropTypes.number, z: PropTypes.number,
   }),
 };
 

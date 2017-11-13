@@ -1,22 +1,26 @@
 import React from 'react';
 
-export const Light = () => (
-  <a-entity>
-    <a-entity light="type: ambient; intensity: 0.75;" />
-    <a-entity
-      light={
-        [
-          'type: point',
-          'castShadow: true',
-          'decay: 0.1',
-          'intensity: 1',
-          'shadowCameraVisible: false',
-          'shadowMapHeight: 4096',
-          'shadowMapWidth: 4096',
-        ].join(';')
-      }
-      position="-5 30 15"
-    />
+const pointLightProps = [
+  'type: point', 'castShadow: true',
+  'decay: 0.1', 'intensity: 0.15',
+  'shadowCameraVisible: false',
+  'shadowMapHeight: 4096', 'shadowMapWidth: 4096',
+].join(';');
+
+const ambientLightProps = [
+  'type: ambient',
+  'intensity: 0.6',
+  'color: #000',
+  'backgroundColor: #fff',
+].join(';');
+
+export const Light = props => (
+  <a-entity
+    id="lights"
+    position="200 200 200"
+  >
+    <a-entity light={ambientLightProps} />
+    <a-entity light={pointLightProps} />
   </a-entity>
 );
 
