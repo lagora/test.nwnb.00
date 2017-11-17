@@ -6,12 +6,16 @@ export const initialState = {
   areas: [],
   hash: undefined,
   size: -1,
+  lightMode: 'day',
 };
 
 const RESET_LEVEL = 'reset the level';
 
+const SET_LIGHT_MODE = 'SET_LIGHT_MODE';
+
 export const types = {
   RESET_LEVEL,
+  SET_LIGHT_MODE,
 };
 
 export const getLevelArea = index => ({
@@ -24,6 +28,18 @@ export const getLevelArea = index => ({
   height: 10,
   depth: 10,
 });
+
+export const setLightMode = lightMode => dispatch =>
+  dispatch({ type: SET_LIGHT_MODE, payload: { lightMode } });
+
+export const setNightMode = () =>
+  setLightMode('night');
+
+export const setDayMode = () =>
+  setLightMode('day');
+
+export const toggleLightMode = () => (dispatch, getState) =>
+  setLightMode(getState().level.lightMode === 'night' ? 'day' : 'night')(dispatch);
 
 export const getSize = size => ({ width: size * 0.5, height: size * 1.5, depth: size * 0.5 });
 
@@ -59,15 +75,20 @@ export const resetLevel = ({ hash, size } = { size: 8 }) => (dispatch) => {
 
 export const actions = {
   resetLevel,
+  toggleLightMode,
 };
 
 export const mapping = {
-  [RESET_LEVEL]: (state, action) => ({
+  [RESET_LEVEL]: (state, { payload }) => ({
     ...state,
-    areas: action.payload.areas,
-    hash: action.payload.hash,
-    size: action.payload.size,
+    areas: payload.areas,
+    hash: payload.hash,
+    size: payload.size,
   }),
+  [SET_LIGHT_MODE]: (state, { payload }) => ({
+    ...state,
+    lightMode: payload.lightMode,
+  })
 };
 
 export const reducer = reducerMaker(initialState, mapping);
