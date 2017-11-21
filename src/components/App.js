@@ -8,17 +8,39 @@ import Axes from './services/Axes'; // eslint-disable-line
 import { v4 } from 'uuid';
 import { hash as h } from 'spark-md5';
 
-export const App = (props) => {
-  if (props.level.size < 0) {
-    const uuid = v4();
-    const hash = h(uuid);
-    props.actions.level.resetLevel({ hash, size: 8 });
-    return false;
+export class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.toggleLightMode = this.toggleLightMode.bind(this);
   }
-  return (
-    <Level {...props} />
-  );
-};
+
+  componentWillMount() {
+    window.addEventListener('keyup', this.toggleLightMode);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keyup', this.toggleLightMode);
+  }
+
+  toggleLightMode({ key }) {
+      key === 'l' ?
+        this.props.actions.level.toggleLightMode() :
+        false
+  }
+
+  render () {
+    const { props } = this;
+    if (props.level.size < 0) {
+      const uuid = v4();
+      const hash = h(uuid);
+      props.actions.level.resetLevel({ hash, size: 8 });
+      return false;
+    }
+    return (
+      <Level {...props} />
+    );
+  }
+}
 
 export default connect(
   state => state,
