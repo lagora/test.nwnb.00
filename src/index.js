@@ -8,7 +8,10 @@ import { domBinder } from './utils';
 import { store } from './modules/store';
 
 require('aframe-effects');
-Raven.config('https://acd51c75672043ae8537f2d101d37daa@sentry.io/241435').install();
+
+if (typeof Raven !== 'undefined') {
+  Raven.config('https://acd51c75672043ae8537f2d101d37daa@sentry.io/241435').install();
+}
 
 export const run = selector => () =>
   render(
