@@ -7,6 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Aframe React Boilerplate</title>
     <!-- <script src="https://cdn.ravenjs.com/3.19.1/raven.min.js" crossorigin="anonymous"></script> -->
+    <script type="nojs" id="mix" data-diffuse data-defaults="0.0 0.0 0.0 1.0">
+
+        void $main(inout vec4 c, vec4 o, vec2 uv, float d){ c.rgb = mix(c.rgb, vec3($0, $1, $2), $3); }
+
+    </script>
+
     <script src="./public/index.js"></script>
 </head>
 

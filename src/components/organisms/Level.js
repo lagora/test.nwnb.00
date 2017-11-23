@@ -10,6 +10,7 @@ export const Level = ({ level }) => (
     shadow="type: pcfsoft"
     fog={`type: exponential; color: #${level.lightMode === 'night' ? '000' : 'ccccff'}; density: 0.0015`}
     physics="debug: true"
+    effects="#mix(0.01 0. 0. 0.)"
   >
     <Light mode={level.lightMode} />
     <Ground />
