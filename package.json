@@ -1,71 +1,73 @@
 {
-    "name": "test.nwnb.00",
-    "version": "1.0.0",
-    "description": "",
-    "main": "./public/index.html",
-    "scripts": {
-        "build": "cross-env NODE_ENV=dev webpack -p --progress",
-        "dev": "cross-env NODE_ENV=dev webpack-dev-server --watch --progress",
-        "lint": "eslint --color src",
-        "lint:watch": "esw -w --changed src",
-        "start": "npm run dev",
-        "test:watch": "jest --color --watch",
-        "test": "jest --color && codecov -t afcf5a17-b138-4494-be4b-2f3d49aa3519"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/lagora/test.nwnb.00.git"
-    },
-    "author": "Franck @Lagora",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/lagora/test.nwnb.00/issues"
-    },
-    "homepage": "https://github.com/lagora/test.nwnb.00#readme",
-    "devDependencies": {
-        "babel-eslint": "^8.0.1",
-        "babel-esnext": "^0.2.3",
-        "babel-loader": "^7.1.2",
-        "babel-plugin-transform-object-rest-spread": "^6.26.0",
-        "babel-preset-env": "^1.6.1",
-        "babel-preset-react": "^6.24.1",
-        "cross-env": "^5.1.1",
-        "enzyme": "^3.1.0",
-        "eslint": "^4.10.0",
-        "eslint-config-airbnb": "^16.1.0",
-        "eslint-plugin-import": "^2.8.0",
-        "eslint-plugin-jsx-a11y": "^6.0.2",
-        "eslint-plugin-react": "^7.4.0",
-        "eslint-watch": "^3.1.3",
-        "install-peerdeps": "^1.2.0",
-        "jest": "^21.2.1",
-        "redux-devtools": "^3.4.0",
-        "webpack": "^3.8.1",
-        "webpack-config": "^7.5.0",
-        "webpack-dev-server": "^2.9.3"
-    },
-    "dependencies": {
-        "aframe": "^0.7.1",
-        "aframe-effects": "^0.5.0",
-        "aframe-physics-system": "^2.1.0",
-        "codecov": "^3.0.0",
-        "prop-types": "^15.6.0",
-        "react": "^16.0.0",
-        "react-dom": "^16.0.0",
-        "react-redux": "^5.0.6",
-        "redux": "^3.7.2",
-        "redux-logger": "^3.0.6",
-        "redux-saga": "^0.16.0",
-        "redux-thunk": "^2.2.0",
-        "spark-md5": "^3.0.0",
-        "uuid": "^3.1.0"
-    },
-    "jest": {
-        "collectCoverage": true,
-        "collectCoverageFrom": [
-            "src/**",
-            "!**/node_modules/**",
-            "!**/vendor/**"
-        ]
-    }
+  "name": "test.nwnb.00",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./public/index.html",
+  "scripts": {
+    "build": "cross-env NODE_ENV=dev webpack -p --progress",
+    "dev": "cross-env NODE_ENV=dev webpack-dev-server --watch --progress",
+    "lint": "eslint --color src",
+    "lint:watch": "esw -w --changed src",
+    "start": "npm run dev",
+    "test:watch": "jest --color --watch",
+    "test": "jest --color && codecov -t afcf5a17-b138-4494-be4b-2f3d49aa3519"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lagora/test.nwnb.00.git"
+  },
+  "author": "Franck @Lagora",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lagora/test.nwnb.00/issues"
+  },
+  "homepage": "https://github.com/lagora/test.nwnb.00#readme",
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "babel-esnext": "^0.2.3",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.1.1",
+    "enzyme": "^3.1.0",
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-watch": "^3.1.3",
+    "install-peerdeps": "^1.2.0",
+    "jest": "^21.2.1",
+    "redux-devtools": "^3.4.0",
+    "webpack": "^3.8.1",
+    "webpack-config": "^7.5.0",
+    "webpack-dev-server": "^2.9.3"
+  },
+  "dependencies": {
+    "aframe": "^0.7.1",
+    "aframe-effects": "^0.5.0",
+    "aframe-mirror-component": "^1.0.2",
+    "aframe-outline": "^1.1.1",
+    "aframe-physics-system": "^2.1.0",
+    "codecov": "^3.0.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-saga": "^0.16.0",
+    "redux-thunk": "^2.2.0",
+    "spark-md5": "^3.0.0",
+    "uuid": "^3.1.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**",
+      "!**/node_modules/**",
+      "!**/vendor/**"
+    ]
+  }
 }
