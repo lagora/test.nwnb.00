@@ -48,7 +48,7 @@
     "aframe": "^0.7.1",
     "aframe-effects": "^0.5.0",
     "aframe-mirror-component": "^1.0.2",
-    "aframe-orbit-controls-component": "^1.0.0",
+    "aframe-orbit-controls-component-2": "^0.1.14",
     "aframe-outline": "^1.1.1",
     "aframe-physics-system": "^2.1.0",
     "codecov": "^3.0.0",
