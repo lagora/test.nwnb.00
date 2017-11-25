@@ -13,6 +13,21 @@ export const Level = ({ level, player, world }) => {
       <Ground />
       <a-sky color={world.light.mode === 'night' ? '#000' : '#fff'} />
       <Player {...player} />
+      {/* <a-entity
+        id="camera"
+        camera="fov: 80; zoom: 1;"
+        position="0 2 5"
+        orbit-controls={[
+          ['autoRotate', false],
+          ['target', '#player'],
+          ['enableDamping', true],
+          ['dampingFactor', 0.125],
+          ['rotateSpeed', 0.25],
+          ['minDistance', 3],
+          ['maxDistance', 100],
+        ].map(markup => markup.join(':')).join(';')}
+        mouse-cursor=""
+      /> */}
       <a-box position="40 1.5 37.5" shadow="receive: true;" />
       {makeAreas(LevelArea)(level.areas)}
     </a-entity>
