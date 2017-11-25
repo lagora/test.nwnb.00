@@ -5,8 +5,8 @@ import { hash as h } from 'spark-md5';
 const defaultSeed = 'nwnb';
 
 export const initialState = {
-  hash: undefined,
-  seed: undefined,
+  hash: '0',
+  seed: defaultSeed,
 };
 
 const GET_SEED = 'getting the seed';
