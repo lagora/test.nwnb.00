@@ -6,23 +6,25 @@ import { LevelArea } from './LevelArea';
 import { Player } from './Player';
 import { makeAreas } from '../../utils';
 
-export const Level = ({ level, player }) => (
-  <a-scene
-    shadow="type: pcfsoft"
-    fog={`type: exponential; color: #${level.lightMode === 'night' ? '000' : 'ccccff'}; density: 0.0015`}
-    physics="debug: true"
-  >
-    <Light mode={level.lightMode} />
-    <Ground />
-    <a-sky color={level.lightMode === 'night' ? '#000' : '#fff'} />
-    <Player {...player} />
-    <a-box position="40 1.5 37.5" shadow="receive: true;" />
-    {makeAreas(LevelArea)(level.areas)}
-  </a-scene>
-);
+export const Level = ({ level, player, world }) => {
+  return (
+    <a-entity>
+      <Light mode={world.light.mode} />
+      <Ground />
+      <a-sky color={world.light.mode === 'night' ? '#000' : '#fff'} />
+      <Player {...player} />
+      <a-box position="40 1.5 37.5" shadow="receive: true;" />
+      {makeAreas(LevelArea)(level.areas)}
+    </a-entity>
+  );
+};
 
 Level.propTypes = {
-  level: PropTypes.shape({}).isRequired,
+  world: PropTypes.shape({
+    light: PropTypes.shape({
+      mode: PropTypes.oneOf(['day', 'night']).isRequired,
+    }).isRequired,
+  }).isRequired,
 };
 
 export default Level;
