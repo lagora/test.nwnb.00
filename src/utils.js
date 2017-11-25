@@ -12,8 +12,7 @@ export const domBinder = document => selector =>
   document.querySelector(selector);
 
 export const makeAreas = LevelArea => areas => areas.map(p =>
-  <LevelArea key={`level-area-${JSON.stringify(p)}`} { ...p} />
-);
+  <LevelArea key={`level-area-${JSON.stringify(p)}`} {...p} />);
 
 export const range = max => (min = 0) => (previous = []) =>
   (previous.length < (max - min) ? range(max)(min)(previous.concat('')) : previous.map((x, i) => i + min));
@@ -23,6 +22,15 @@ export const reducerMaker = (initialState, mapping) => (state = initialState, ac
 
 export const xyzToString = ({ x, y, z }) =>
   `${x} ${y} ${z}`;
+
+const xyzStringMap = ['x', 'y', 'z'];
+
+export const xyzStringToObject = xyz => (map = xyzStringMap) =>
+  xyz.split(' ')
+    .reduce((all, value, index) => ({
+      ...all,
+      [map[index]]: value,
+    }), {});
 
 export default {
   domBinder,
