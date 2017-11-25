@@ -8,7 +8,8 @@ import React from 'react';
 // import { v4 } from 'uuid';
 // import { hash as h } from 'spark-md5';
 
-import Game from './organisms/Game';
+import { Route, Switch } from 'react-router-dom';
+import Game from './organisms/Game'; // eslint-disable-line
 
 // export class App extends React.Component {
 //   constructor(props) {
@@ -43,8 +44,6 @@ import Game from './organisms/Game';
 //     );
 //   }
 // }
-
-import { Route, Switch } from 'react-router-dom';
 
 export const App = props => (
   <Switch>
