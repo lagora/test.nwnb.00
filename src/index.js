@@ -7,10 +7,11 @@ import App from './components/App'; // eslint-disable-line
 import { domBinder } from './utils';
 import { store } from './modules/store';
 
+require('aframe-orbit-controls-component');
 require('aframe-effects');
 
 if (typeof Raven !== 'undefined') {
-  Raven.config('https://acd51c75672043ae8537f2d101d37daa@sentry.io/241435').install();
+  Raven.config('https://acd51c75672043ae8537f2d101d37daa@sentry.io/241435').install(); // eslint-disable-line
 }
 
 export const run = selector => () =>
