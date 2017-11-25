@@ -6,6 +6,7 @@ import { render } from 'react-dom';
 import App from './components/App'; // eslint-disable-line
 import { domBinder } from './utils';
 import { store } from './modules/store';
+import { BrowserRouter } from 'react-router-dom';
 
 require('aframe-effects');
 
@@ -15,9 +16,11 @@ if (typeof Raven !== 'undefined') {
 
 export const run = selector => () =>
   render(
-    <Provider store={store} >
-      <App />
-    </Provider>,
+    <BrowserRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BrowserRouter>,
     domBinder(document)(selector),
   );
 
