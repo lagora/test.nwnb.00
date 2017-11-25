@@ -4,8 +4,7 @@ import { reducerMaker, xyzStringToObject } from '../utils';
 export const initialState = {
   current: undefined,
   player: {
-    pov: undefined,
-    thirdPerson: undefined,
+    thirdPerson: true,
   },
   list: [],
 };

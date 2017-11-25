@@ -35,6 +35,11 @@ Game.propTypes = {
       getSeed: PropTypes.func.isRequired,
     }).isRequired,
   }).isRequired,
+  camera: PropTypes.shape({
+    player: PropTypes.shape({
+      thirdPerson: PropTypes.bool.isRequired,
+    }).isRequired,
+  }).isRequired,
   game: PropTypes.shape({
     hash: PropTypes.string.isRequired,
     seed: PropTypes.string.isRequired,

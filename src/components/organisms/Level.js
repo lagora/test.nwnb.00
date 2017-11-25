@@ -6,33 +6,25 @@ import { LevelArea } from './LevelArea';
 import { Player } from './Player';
 import { makeAreas } from '../../utils';
 
-export const Level = ({ level, player, world }) => (
+export const Level = ({
+  camera, level, player, world,
+}) => (
   <a-entity>
     <Light mode={world.light.mode} />
     <Ground />
     <a-sky color={world.light.mode === 'night' ? '#000' : '#fff'} />
-    <Player {...player} />
-    {/* <a-entity
-      id="camera"
-      camera="fov: 80; zoom: 1;"
-      position="0 2 5"
-      orbit-controls={[
-        ['autoRotate', false],
-        ['target', '#player'],
-        ['enableDamping', true],
-        ['dampingFactor', 0.125],
-        ['rotateSpeed', 0.25],
-        ['minDistance', 3],
-        ['maxDistance', 100],
-      ].map(markup => markup.join(':')).join(';')}
-      mouse-cursor=""
-    /> */}
+    <Player {...player} camera={{ ...camera }} />
     <a-box position="40 1.5 37.5" shadow="receive: true;" />
     {makeAreas(LevelArea)(level.areas)}
   </a-entity>
 );
 
 Level.propTypes = {
+  camera: PropTypes.shape({
+    player: PropTypes.shape({
+      thirdPerson: PropTypes.bool.isRequired,
+    }).isRequired,
+  }).isRequired,
   level: PropTypes.shape({
     size: PropTypes.number.isRequired,
   }).isRequired,

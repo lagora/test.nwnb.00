@@ -20,6 +20,38 @@ export const Player = props => (
       depth="1"
       material="color: #F90"
     />
+    <a-entity
+      id="camera"
+      camera="fov: 90; zoom: 1;"
+      position={
+        xyzToString({
+          ...props.self.position,
+          y: props.self.position.y + 3,
+          z: props.self.position.z + 4,
+        })
+      }
+      orbit-controls={[
+        // ['enabled', props.camera.player.thirdPerson],
+        ['autoRotate', false],
+        ['target', '#player'],
+        ['enableDamping', true],
+        ['enableZoom', false],
+        ['rotateSpeed', false],
+        ['dampingFactor', 0.125],
+        ['rotateSpeed', 0.25],
+        ['minDistance', 3],
+        ['maxDistance', 100],
+        ['enableKeys', false],
+        ['minPolarAngle', 0.5],
+        ['maxPolarAngle', Math.PI / 2.1],
+        ['rotateTo', {
+          ...props.self.position,
+          y: props.self.position.y + 2,
+        }],
+      ].map(markup => markup.join(':')).join(';')}
+      mouse-cursor=""
+      look-controls-enabled="false"
+    />
     {/* <Camera
       position={{ x: 0, y: 0, z: 1.5 }}
       rotation={{ x: 9, y: -30, z: 0 }}
@@ -28,6 +60,11 @@ export const Player = props => (
 );
 
 Player.propTypes = {
+  camera: PropTypes.shape({
+    player: PropTypes.shape({
+      thirdPerson: PropTypes.bool.isRequired,
+    }).isRequired,
+  }).isRequired,
   self: PropTypes.shape({
     position: PropTypes.shape({
       x: PropTypes.number.isRequired,
