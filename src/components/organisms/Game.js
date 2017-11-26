@@ -4,6 +4,7 @@ import { bindActionCreators as binder } from 'redux';
 import { connect } from 'react-redux';
 import { actions as unboundActions } from '../../modules/actions';
 import { actionMapper } from '../../utils';
+import { camera } from '../proptypes';
 import { Level } from './Level';
 
 export class Game extends React.Component {
@@ -35,11 +36,7 @@ Game.propTypes = {
       getSeed: PropTypes.func.isRequired,
     }).isRequired,
   }).isRequired,
-  camera: PropTypes.shape({
-    player: PropTypes.shape({
-      thirdPerson: PropTypes.bool.isRequired,
-    }).isRequired,
-  }).isRequired,
+  camera: camera, // eslint-disable-line
   game: PropTypes.shape({
     hash: PropTypes.string.isRequired,
     seed: PropTypes.string.isRequired,

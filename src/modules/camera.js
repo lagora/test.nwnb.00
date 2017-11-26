@@ -17,7 +17,7 @@ export const types = {
   SET_CURRENT_CAMERA,
 };
 
-export const addCamera = ({ position, rotation }) => dispatch => {
+export const addCamera = ({ position, rotation }) => (dispatch) => {
   const id = v4();
   const positionObject = typeof position === 'string' ? xyzStringToObject(position) : position;
   const rotationObject = typeof rotation === 'string' ? xyzStringToObject(rotation) : rotation;

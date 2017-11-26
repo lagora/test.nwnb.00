@@ -1,6 +1,7 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 // import { Camera } from '../atoms/Camera';
+import { camera, position, rotation } from '../proptypes';
 import { xyzToString } from '../../utils';
 
 export const Player = props => (
@@ -60,22 +61,10 @@ export const Player = props => (
 );
 
 Player.propTypes = {
-  camera: PropTypes.shape({
-    player: PropTypes.shape({
-      thirdPerson: PropTypes.bool.isRequired,
-    }).isRequired,
-  }).isRequired,
+  camera: camera, // eslint-disable-line
   self: PropTypes.shape({
-    position: PropTypes.shape({
-      x: PropTypes.number.isRequired,
-      y: PropTypes.number.isRequired,
-      z: PropTypes.number.isRequired,
-    }).isRequired,
-    rotation: PropTypes.shape({
-      x: PropTypes.number.isRequired,
-      y: PropTypes.number.isRequired,
-      z: PropTypes.number.isRequired,
-    }).isRequired,
+    position,
+    rotation,
   }).isRequired,
 };
 
