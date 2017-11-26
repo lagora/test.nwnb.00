@@ -1,6 +1,5 @@
 import React from 'react';
-import { PropTypes } from 'prop-types';
-import { position, rotation } from '../proptypes';
+// import { number, shape } from 'prop-types';
 import { xyzToString } from '../../utils';
 
 export const PlayerCamera = props => (
@@ -9,13 +8,13 @@ export const PlayerCamera = props => (
     camera="fov: 90; zoom: 1;"
     position={
       xyzToString({
-        ...props.self.position,
-        y: props.self.position.y + 3,
-        z: props.self.position.z + 4,
+        ...props.position,
+        y: props.position.y + 3,
+        z: props.position.z + 4,
       })
     }
     orbit-controls={[
-      // ['enabled', props.camera.player.thirdPerson],
+      ['enabled', ['TPS'].includes(props.preset)],
       ['autoRotate', false],
       ['target', '#player'],
       ['enableDamping', true],
@@ -29,8 +28,8 @@ export const PlayerCamera = props => (
       ['minPolarAngle', 0.5],
       ['maxPolarAngle', Math.PI / 2.1],
       ['rotateTo', {
-        ...props.self.position,
-        y: props.self.position.y + 2,
+        ...props.position,
+        y: props.position.y + 2,
       }],
     ].map(markup => markup.join(':')).join(';')}
     mouse-cursor=""
@@ -38,11 +37,19 @@ export const PlayerCamera = props => (
   />
 );
 
-PlayerCamera.propTypes = {
-  self: PropTypes.shape({
-    position,
-    rotation,
-  }).isRequired,
-};
+// PlayerCamera.propTypes = {
+//   self: shape({
+//     position: shape({
+//       x: number.isRequired,
+//       y: number.isRequired,
+//       z: number.isRequired,
+//     }),
+//     rotation: shape({
+//       x: number.isRequired,
+//       y: number.isRequired,
+//       z: number.isRequired,
+//     }),
+//   }).isRequired,
+// };
 
 export default PlayerCamera;

@@ -3,7 +3,7 @@ import { reducerMaker } from '../utils';
 export const initialState = {
   light: {
     mode: 'day',
-  }
+  },
 };
 
 const SET_LIGHT_MODE = 'SET_LIGHT_MODE';
@@ -22,10 +22,10 @@ export const setDayMode = () =>
   setLightMode('day');
 
 export const toggleLightMode = () => (dispatch, getState) =>
-  setLightMode(getState().level.lightMode === 'night' ? 'day' : 'night')(dispatch);
-
+  setLightMode(getState().world.light.mode === 'night' ? 'day' : 'night')(dispatch);
 
 export const actions = {
+  setLightMode,
   toggleLightMode,
 };
 
@@ -34,7 +34,7 @@ export const mapping = {
     ...state,
     light: {
       mode: payload.mode,
-    }
+    },
   }),
 };
 
