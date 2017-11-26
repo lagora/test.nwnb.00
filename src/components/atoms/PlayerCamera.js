@@ -3,7 +3,7 @@ import { PropTypes } from 'prop-types';
 import { position, rotation } from '../proptypes';
 import { xyzToString } from '../../utils';
 
-export const Player = props => (
+export const PlayerCamera = props => (
   <a-entity
     id="camera"
     camera="fov: 90; zoom: 1;"
