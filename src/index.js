@@ -8,6 +8,7 @@ import App from './components/App'; // eslint-disable-line
 import { domBinder } from './utils';
 import { store } from './modules/store';
 
+require('aframe-orbit-controls-component-2');
 require('aframe-effects');
 
 if (typeof Raven !== 'undefined') {

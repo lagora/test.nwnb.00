@@ -23,6 +23,15 @@ export const reducerMaker = (initialState, mapping) => (state = initialState, ac
 export const xyzToString = ({ x, y, z }) =>
   `${x} ${y} ${z}`;
 
+const xyzStringMap = ['x', 'y', 'z'];
+
+export const xyzStringToObject = xyz => (map = xyzStringMap) =>
+  xyz.split(' ')
+    .reduce((all, value, index) => ({
+      ...all,
+      [map[index]]: value,
+    }), {});
+
 export default {
   domBinder,
   reducerMaker,
