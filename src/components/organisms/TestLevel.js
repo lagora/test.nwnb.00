@@ -21,6 +21,7 @@ export const TestBuildingPillar = ({ position }) => (
   <a-box
     position={position}
     height={storyHeight}
+    opacity="0.9"
     static-body
   />
 );
@@ -31,7 +32,8 @@ export const Crate = ({ position }) => (
     width={crateSize}
     height={crateSize}
     depth={crateSize}
-    dynamic-body
+    opacity="0.9"
+    dynamic-body="0.5"
   />
 );
 
@@ -41,6 +43,7 @@ export const TestBuildingWall = ({ length, position, side }) => (
     width={`${['north', 'south'].includes(side) ? floorHeight : length}`}
     height={`${storyHeight - (floorHeight * 2)}`}
     depth={`${['east', 'west'].includes(side) ? floorHeight : length}`}
+    opacity="0.9"
     static-body
   />
 );
@@ -53,6 +56,7 @@ export const TestBuildingstory = ({ floor, elevation }) => (
         width="50"
         height={floorHeight}
         depth="50"
+        opacity="0.9"
         static-body
       />
     ) : false}
@@ -61,28 +65,25 @@ export const TestBuildingstory = ({ floor, elevation }) => (
       width="50"
       height={floorHeight}
       depth="50"
+      opacity="0.9"
       static-body
     />
     <TestBuildingWall
-      opacity="0.5"
       side="north"
       length="50"
       position={`${25 - floorHeight} ${elevation + (storyHeight / 2)} 0`}
     />
     <TestBuildingWall
-      opacity="0.5"
       side="south"
       length="50"
       position={`${(25 * -1) - floorHeight} ${elevation + (storyHeight / 2)} 0`}
     />
     <TestBuildingWall
-      opacity="0.5"
       side="east"
       length="50"
       position={`0 ${elevation + (storyHeight / 2)} ${25 - floorHeight}`}
     />
     <TestBuildingWall
-      opacity="0.5"
       side="west"
       length="50"
       position={`0z ${elevation + (storyHeight / 2)} ${(25 * -1) - floorHeight}`}

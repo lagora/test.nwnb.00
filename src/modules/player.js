@@ -4,7 +4,7 @@ export const initialState = {
   self: {
     position: {
       x: 22,
-      y: 0.5,
+      y: 1,
       z: 22,
     },
     rotation: {

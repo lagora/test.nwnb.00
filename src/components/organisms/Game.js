@@ -23,32 +23,10 @@ export const Game = (props) => {
       <Controls {...props} />
       <Level {...props} />
       <Player {...player} debug={debug} camera={camera} />
-      <PlayerCamera
-        {...player.self}
-        preset={camera.preset}
-      />
+      <a-sky src="https://upload.wikimedia.org/wikipedia/commons/8/83/Equirectangular_projection_SW.jpg"></a-sky>
     </a-scene>
   );
 };
-
-// Game.propTypes = {
-//   actions: PropTypes.shape({
-//     game: PropTypes.shape({
-//       getSeed: PropTypes.func.isRequired,
-//     }).isRequired,
-//   }).isRequired,
-//   camera: camera, // eslint-disable-line
-//   game: PropTypes.shape({
-//     hash: PropTypes.string.isRequired,
-//     seed: PropTypes.string.isRequired,
-//   }).isRequired,
-//   level: PropTypes.shape({}).isRequired,
-//   world: PropTypes.shape({
-//     light: PropTypes.shape({
-//       mode: PropTypes.oneOf(['day', 'night']).isRequired,
-//     }).isRequired,
-//   }).isRequired,
-// };
 
 export default connect(
   state => state,

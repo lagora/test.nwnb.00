@@ -6,15 +6,8 @@ export const PlayerCamera = props => (
   <a-entity
     id="camera"
     camera="fov: 90; zoom: 1;"
-    position={
-      xyzToString({
-        ...props.position,
-        y: props.position.y + 3,
-        z: props.position.z + 4,
-      })
-    }
     orbit-controls={[
-      ['enabled', ['TPS'].includes(props.preset)],
+      // ['enabled', ['TPS'].includes(props.preset)],
       ['autoRotate', false],
       ['target', '#player'],
       ['enableDamping', true],
@@ -23,7 +16,7 @@ export const PlayerCamera = props => (
       ['dampingFactor', 0.125],
       ['rotateSpeed', 0.25],
       ['minDistance', 3],
-      ['maxDistance', 100],
+      ['maxDistance', 10],
       ['enableKeys', false],
       ['minPolarAngle', 0.5],
       ['maxPolarAngle', Math.PI / 2.1],
@@ -33,7 +26,6 @@ export const PlayerCamera = props => (
       }],
     ].map(markup => markup.join(':')).join(';')}
     mouse-cursor=""
-    look-controls-enabled="false"
   />
 );
 

@@ -8,9 +8,9 @@ import { domBinder } from './utils';
 import { store } from './modules/store';
 
 var extras = require('aframe-extras');
-// extras.physics.registerAll();
+extras.registerAll();
 
-require('aframe-physics-system');
+
 require('aframe-orbit-controls-component-2');
 require('aframe-effects');
 
