@@ -3,9 +3,9 @@ import { reducerMaker } from '../utils';
 export const initialState = {
   self: {
     position: {
-      x: 0,
-      y: 0,
-      z: 0,
+      x: 22,
+      y: 1,
+      z: 22,
     },
     rotation: {
       x: 0,
@@ -20,7 +20,7 @@ const SET_PLAYER_ROTATION = 'set the player rotation';
 
 export const types = {
   SET_PLAYER_POSITION,
-  SET_PLAYER_ROTATION,
+    SET_PLAYER_ROTATION,
 };
 
 export const setPlayerPosition = position => dispatch =>

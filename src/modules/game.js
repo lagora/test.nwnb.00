@@ -12,17 +12,21 @@ export const initialState = {
 const GET_SEED = 'getting the seed';
 const HASH_FROM_SEED = 'hashing the seed';
 
-export const getSeed = (seed = defaultSeed) => dispatch => {
-  dispatch({ type: GET_SEED, payload: { seed } });
-  dispatch({ type: HASH_FROM_SEED, payload: { hash: h(seed) } });
-};
-
 export const types = {
   GET_SEED,
   HASH_FROM_SEED,
 };
 
+export const getSeed = (seed = defaultSeed) => dispatch => {
+  dispatch({ type: GET_SEED, payload: { seed } });
+  dispatch({ type: HASH_FROM_SEED, payload: { hash: h(seed) } });
+};
+
+export const getLevelSymbol = () => (dispatch, getState) =>
+  getState().game.hash.substr(0, 1);
+
 export const actions = {
+  getLevelSymbol,
   getSeed,
 };
 
