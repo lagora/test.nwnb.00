@@ -8,11 +8,14 @@ import { domBinder } from './utils';
 import { store } from './modules/store';
 
 var extras = require('aframe-extras');
+var GamepadControls = require('aframe-gamepad-controls');
+AFRAME.registerComponent('console-gamepad-controls', GamepadControls);
 extras.registerAll();
 
-
+require('./test.shader');
+require('aframe-raytrace-component');
 require('aframe-orbit-controls-component-2');
-require('aframe-effects');
+// require('aframe-effects');
 
 if (typeof Raven !== 'undefined') {
   Raven.config('https://acd51c75672043ae8537f2d101d37daa@sentry.io/241435').install(); // eslint-disable-line

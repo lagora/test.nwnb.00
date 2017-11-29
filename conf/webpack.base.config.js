@@ -15,6 +15,10 @@ export default new Config().merge({
           loader: 'babel-loader',
         },
       },
+      {
+        test: /\.glsl$/,
+        loader: 'webpack-glsl-loader',
+      }
     ],
   },
 });

@@ -16,14 +16,16 @@ export const Game = (props) => {
   }
   return (
     <a-scene
-      shadow="type: pcfsoft"
+      shadow="type: basic"
+      shadowBias="0.1"
       fog={`type: exponential; color: #${world.light.mode === 'night' ? '000' : 'ccccff'}; density: 0.0015`}
       physics="debug: true"
+      effects="bloom"
+      bloom="filter: bloom!, bloom.filter, #customFilter"
     >
       <Controls {...props} />
       <Level {...props} />
       <Player {...player} debug={debug} camera={camera} />
-      <a-sky src="https://upload.wikimedia.org/wikipedia/commons/8/83/Equirectangular_projection_SW.jpg"></a-sky>
     </a-scene>
   );
 };

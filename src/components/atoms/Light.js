@@ -1,49 +1,48 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 
-const pointLightProps = {
+const directionalLightProps = {
   day: [
-    'type: point',
+    'type: directional',
     'castShadow: true',
     'decay: 0.1',
-    'intensity: 0.5',
+    'intensity: 0.9',
     'shadowCameraVisible: false',
     'shadowMapHeight: 4096',
     'shadowMapWidth: 4096',
   ].join(';'),
   night: [
-    'type: point',
+    'type: directional',
     'castShadow: true',
     'decay: 0.1',
-    'intensity: 0.15',
+    'intensity: 0.1',
     'shadowCameraVisible: false',
     'shadowMapHeight: 4096',
     'shadowMapWidth: 4096',
   ].join(';'),
 };
 
-const ambientLightProps = {
+const hemisphereLightProps = {
   day: [
-    'type: ambient',
-    'intensity: 0.6',
+    'type: hemisphere',
+    'intensity: 0.1',
     'color: #fff',
-    'backgroundColor: #fff',
+    'backgroundColor: #000',
   ].join(';'),
   night: [
-    'type: ambient',
-    'intensity: 0.6',
-    'color: #000',
-    'backgroundColor: #fff',
+    'type: hemisphere',
+    'intensity: 0.01',
+    'color: #777',
+    'backgroundColor: #000',
   ].join(';'),
 };
 
 export const Light = ({ mode }) => (
   <a-entity
     id="lights"
-    position="200 200 200"
   >
-    <a-entity light={ambientLightProps[mode]} />
-    <a-entity light={pointLightProps[mode]} />
+    <a-entity light={hemisphereLightProps[mode]} />
+    <a-entity position="-1 1 1"light={directionalLightProps[mode]} />
   </a-entity>
 );
 
