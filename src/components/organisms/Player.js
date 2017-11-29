@@ -14,6 +14,7 @@ export const Player = props => (
     universal-controls
     mouse-controls
     keyboard-controls
+    console-gamepad-controls
     kinematic-body="mass: 10;"
   >
     <a-box
