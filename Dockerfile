@@ -1,3 +1,3 @@
-FROM node:9.2.0
+FROM node:16.4.2
 
 RUN npm install && npm test && npm run build
